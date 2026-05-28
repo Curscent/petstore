@@ -313,6 +313,21 @@ h1.hero-title, h2.hero-title {
 }
 .page-container { position: relative; z-index: 1; }
 
+/* Hero panel and blob decorative shape */
+.hero-wrap { padding-top: 0; }
+.hero-panel { background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9)); border-radius: 18px; overflow: visible; }
+.hero-blob { position: absolute; right: 36%; top: -16%; width: 60%; height: 140%; background: rgba(54,196,138,0.14); border-radius: 40% 60% 30% 70% / 40% 60% 30% 70%; transform: rotate(-6deg); z-index: 0; }
+.hero-panel > div:first-child { position: relative; z-index: 5; }
+.hero-image-wrap { width: 520px; max-width: 52vw; border-radius: 28px; overflow: hidden; box-shadow: 0 18px 30px rgba(16,24,40,0.12); }
+.hero-image { width: 100%; height: auto; display: block; object-fit: cover; }
+.hero-cta { display: inline-block; background: #ffcc00; color: #083022; padding: 10px 18px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+.hero-cta-outline { display: inline-block; color: #083022; padding: 10px 18px; border-radius: 999px; border: 2px solid rgba(8,48,34,0.08); text-decoration: none; }
+
+@media (max-width: 1024px) {
+  .hero-image-wrap { max-width: 100%; width: 100%; }
+  .hero-blob { right: -10%; top: 10%; width: 80%; height: 90%; }
+}
+
 /* Make pet names use the CTA orange for emphasis */
 .pet-name {
   color: var(--brand-cta) !important;
