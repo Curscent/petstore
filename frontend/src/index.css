@@ -41,7 +41,20 @@
     --pattern-fill: #36c48a;
     /* CTA green used for primary buttons and hero title */
     --brand-cta: #36c48a;
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 128 128'%3E%3Cg fill='%23ff8237' fill-opacity='0.14'%3E%3Cellipse cx='36' cy='34' rx='14' ry='18'/%3E%3Cellipse cx='64' cy='28' rx='14' ry='20'/%3E%3Cellipse cx='92' cy='34' rx='14' ry='18'/%3E%3Cellipse cx='108' cy='58' rx='12' ry='16'/%3E%3Cpath d='M64 48c-26 0-46 20-46 46 0 5 1 10 3 14 10 5 26 6 43 6s33-1 43-6c2-4 3-9 3-14 0-26-20-46-46-46zm0 28c6-9 16-3 18 2 2 5 0 12-7 17-7 6-11 10-11 10s-4-4-11-10c-7-5-9-12-7-17 2-5 12-11 18-2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* page background with subtle green paw pattern */
+html, body, #root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-cream);
+  background-image:
+    radial-gradient(at 0% 0%, hsla(140,60%,96%,1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(140,60%,94%,1) 0px, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 128 128'%3E%3Cg fill='%2336c48a' fill-opacity='0.12'%3E%3Cellipse cx='36' cy='34' rx='14' ry='18'/%3E%3Cellipse cx='64' cy='28' rx='14' ry='20'/%3E%3Cellipse cx='92' cy='34' rx='14' ry='18'/%3E%3Cellipse cx='108' cy='58' rx='12' ry='16'/%3E%3Cpath d='M64 48c-26 0-46 20-46 46 0 5 1 10 3 14 10 5 26 6 43 6s33-1 43-6c2-4 3-9 3-14 0-26-20-46-46-46zm0 28c6-9 16-3 18 2 2 5 0 12-7 17-7 6-11 10-11 10s-4-4-11-10c-7-5-9-12-7-17 2-5 12-11 18-2z'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 96px 96px;
   background-attachment: fixed;
 }
@@ -147,11 +160,11 @@ h1,h2,h3,h4,h5,h6,p,span,button,label,a {
 }
 
 /* ensure any text or icons inside header/footer use white */
-.site-header *, header[role='banner'] *,
+.site-header *, header[role='banner'],
 .site-footer *, footer * {
   color: #ffffff !important;
-    background-color: var(--brand-green) !important; /* keep green background */
-
+  background-color: var(--brand-green) !important; /* keep green background */
+}
 /* restore Add Pet button's visual style inside the header (MUI Button with color=primary) */
 .site-header .MuiButton-root,
 header[role='banner'] .MuiButton-root {
@@ -165,7 +178,6 @@ header[role='banner'] .MuiButton-root {
   border-color: transparent !important;
   color: #ffffff !important;
 }
-    color: var(--brand-cta) !important;
 /* Hero title override to use CTA color for emphasis */
 .page-container h1[class*='text-5xl'],
 .page-container h1[class*='text-6xl'],
@@ -197,8 +209,8 @@ h1.hero-title, h2.hero-title {
 /* ensure the small cart icon near Add Pet remains visible (in white) */
 .site-header .cart-icon, header[role='banner'] .cart-icon {
   color: #ffffff !important;
-    color: var(--brand-cta) !important;
-
+  color: var(--brand-cta) !important;
+}
 .page-container { position: relative; z-index: 1; }
 
 /* Make pet names use the CTA orange for emphasis */
