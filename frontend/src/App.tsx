@@ -142,7 +142,7 @@ export default function App() {
               <div className="text-center lg:text-left animate-[fadeUp_700ms_ease_forwards]">
                 <div className="inline-flex items-center gap-3 rounded-full bg-white/70 px-4 py-2">
                   <img src={Logo} alt="Petstore logo" className="h-8 w-8" />
-                  <span className="text-sm font-semibold text-stone-700">Petstore</span>
+                  <span className="text-sm font-semibold text-stone-700">HappyPaws</span>
                 </div>
                 <Typography
                   variant="h2"
@@ -150,16 +150,16 @@ export default function App() {
                   sx={{ color: 'secondary.main', fontWeight: 900 }}
                   className="text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight mt-4 transition-transform duration-700 hover:-translate-y-1"
                 >
-                  Find Your New Best Friend Today
+                  Find your perfect companion today
                 </Typography>
                 <Typography variant="body1" sx={{ color: 'secondary.main', opacity: 0.85 }} className="mt-4 text-stone-600 font-normal text-base sm:text-lg">
-                  Meet lovable companions, get expert care tips, and bring them home fast. Shop pets that match your lifestyle and energy.
+                  Adopt locally, shop ethically — discover pets and the care they need.
                 </Typography>
                 <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm lg:justify-start">
-                  <span className="px-3 py-1 rounded-full bg-white/70 text-stone-700">Vet-checked health</span>
+                  <span className="px-3 py-1 rounded-full bg-white/70 text-stone-700">Vet-checked</span>
                   <span className="px-3 py-1 rounded-full bg-white/70 text-stone-700">Same-day pickup</span>
-                  <span className="px-3 py-1 rounded-full bg-white/70 text-stone-700">Care plans included</span>
-                  <span className="px-3 py-1 rounded-full bg-white/70 text-stone-700">New arrivals weekly</span>
+                  <span className="px-3 py-1 rounded-full bg-white/70 text-stone-700">Care plans</span>
+                  <span className="px-3 py-1 rounded-full bg-white/70 text-stone-700">New arrivals</span>
                 </div>
                 <div className="mt-6 max-w-2xl mx-auto lg:mx-0" />
               </div>
