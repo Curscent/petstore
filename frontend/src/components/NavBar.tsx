@@ -14,7 +14,7 @@ type Props = {
 export default function NavBar({ cartCount, onOpenAdd, onOpenCart, viewMode, onViewModeChange }: Props) {
   const theme = useTheme()
   return (
-  <Box component="header" className="site-header bg-stone-900 text-stone-100" sx={{ borderBottom: 0 }}>
+  <Box component="header" className="site-header header-flat-bg text-stone-100" sx={{ borderBottom: 0 }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
@@ -26,7 +26,7 @@ export default function NavBar({ cartCount, onOpenAdd, onOpenCart, viewMode, onV
               </div>
             </div>
           </div>
-          <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3">
             <ToggleButtonGroup
               color="primary"
               size="small"
@@ -35,14 +35,14 @@ export default function NavBar({ cartCount, onOpenAdd, onOpenCart, viewMode, onV
               onChange={(_, value) => value && onViewModeChange(value)}
               aria-label="dashboard mode"
             >
-              <ToggleButton value="customer">Customer</ToggleButton>
-              <ToggleButton value="admin">Admin</ToggleButton>
+              <ToggleButton value="customer" className="view-toggle">Customer</ToggleButton>
+              <ToggleButton value="admin" className="view-toggle">Admin</ToggleButton>
             </ToggleButtonGroup>
             {viewMode === 'admin' && (
-              <Button variant="contained" color="primary" size="small" onClick={onOpenAdd}>Add Pet</Button>
+              <Button variant="contained" color="primary" size="small" onClick={onOpenAdd} className="add-pet-btn">Add Pet</Button>
             )}
             {viewMode === 'customer' && (
-              <IconButton aria-label="cart" color="primary" onClick={() => onOpenCart && onOpenCart()}>
+              <IconButton aria-label="cart" color="primary" onClick={() => onOpenCart && onOpenCart()} className="cart-icon">
                 <Badge badgeContent={cartCount} color="error">
                   <ShoppingCartIcon />
                 </Badge>

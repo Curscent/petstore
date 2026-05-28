@@ -31,9 +31,9 @@
     --bg-cream: #f6fbf8;
     --text-charcoal: #0f2f1f;
 
-    /* Header/Footer (soft green framing) */
-    --header-bg: #dff3ea;
-    --header-bg-2: #d0efe6;
+  /* Header/Footer (single flat green) */
+  --header-bg: #36c48a;
+  --header-bg-2: #36c48a;
     --header-text: #083022;
     --footer-bg: #dff3ea;
     --footer-text: #083022;
@@ -148,15 +148,15 @@ h1,h2,h3,h4,h5,h6,p,span,button,label,a {
 }
 
 /* header/footer framing */
-.site-header, header[role='banner'] {
-  background: linear-gradient(180deg, var(--header-bg), var(--header-bg-2));
-  color: #ffffff !important; /* make header text white */
+.site-header, header[role='banner'], .header-flat-bg {
+  background-color: var(--header-bg) !important;
+  color: #ffffff !important;
   z-index: 10;
 }
 
 .site-footer, footer {
-  background: linear-gradient(180deg, var(--footer-bg), #caa783);
-  color: #ffffff !important; /* make footer text white */
+  background-color: var(--header-bg) !important;
+  color: #ffffff !important;
 }
 
 /* ensure any text or icons inside header/footer use white */
@@ -168,8 +168,20 @@ h1,h2,h3,h4,h5,h6,p,span,button,label,a {
 /* restore Add Pet button's visual style inside the header (MUI Button with color=primary) */
 .site-header .MuiButton-root,
 header[role='banner'] .MuiButton-root {
-    background-color: var(--brand-cta) !important;
-  background-color: var(--brand-amber) !important; /* keep orange background */
+  background-color: var(--brand-cta) !important;
+}
+
+/* Specific header button styles */
+.add-pet-btn {
+  background-color: #ffffff !important;
+  color: var(--header-bg) !important;
+  text-transform: none !important;
+}
+.cart-icon {
+  color: #ffffff !important;
+}
+.view-toggle {
+  color: #ffffff !important;
 }
 
 /* Primary CTA styling for Add to Cart, Add Pet, Check Out and hero title */
