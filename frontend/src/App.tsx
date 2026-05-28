@@ -180,22 +180,22 @@ export default function App() {
                   <div className="hero-blob" aria-hidden />
                   <div className="hero-photo-card">
                     <img
-                      src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=1200&q=80"
-                      alt="Curious cat peeking"
-                      className="hero-photo"
-                      loading="lazy"
-                    />
+                        src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=1200&q=80"
+                        alt="Friendly dog sitting"
+                        className="hero-photo"
+                        loading="lazy"
+                      />
                   </div>
                   <div className="p-4 sm:p-5">
                     <p className="text-sm font-semibold text-stone-700">Top match this week</p>
-                    <p className="mt-1 text-base text-stone-600">Golden retriever pups with starter care kits.</p>
+                    <p className="mt-1 text-base text-stone-600">Labrador and golden retriever pups available for adoption with starter kits.</p>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                   <div className="group overflow-hidden rounded-2xl border border-white/60 bg-white/70 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <img
-                      src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=80"
-                      alt="Golden puppy looking up"
+                      src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=80"
+                      alt="Tabby cat lounging"
                       className="h-36 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
@@ -209,6 +209,20 @@ export default function App() {
                     />
                   </div>
                 </div>
+                  <div className="mt-4 grid grid-cols-3 gap-4">
+                    <div className="bg-white/70 p-4 rounded-lg shadow-sm text-sm">
+                      <div className="font-semibold">10,000+</div>
+                      <div className="text-stone-600">Pets adopted</div>
+                    </div>
+                    <div className="bg-white/70 p-4 rounded-lg shadow-sm text-sm">
+                      <div className="font-semibold">100+</div>
+                      <div className="text-stone-600">Shelters partnered</div>
+                    </div>
+                    <div className="bg-white/70 p-4 rounded-lg shadow-sm text-sm">
+                      <div className="font-semibold">5,000+</div>
+                      <div className="text-stone-600">Pet lovers</div>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
