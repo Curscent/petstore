@@ -184,6 +184,34 @@ header[role='banner'] .MuiButton-root {
   color: #ffffff !important;
 }
 
+/* Make header toggle buttons and icons clearly visible */
+.header-flat-bg .view-toggle {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  padding: 6px 10px !important;
+  min-width: 72px !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+}
+.header-flat-bg .view-toggle.Mui-selected {
+  background: rgba(255,255,255,0.14) !important;
+}
+.header-flat-bg .cart-icon {
+  margin-left: 6px;
+}
+.header-flat-bg .cart-icon .MuiSvgIcon-root {
+  color: #ffffff !important;
+}
+.header-flat-bg .cart-icon .MuiBadge-badge {
+  background-color: #ff6b6b !important; /* make badge visible */
+  color: #fff !important;
+}
+.header-flat-bg .add-pet-btn {
+  margin-left: 6px;
+  box-shadow: none !important;
+}
+
 /* Primary CTA styling for Add to Cart, Add Pet, Check Out and hero title */
 .btn-cta, .add-to-cart-btn, .checkout-btn, .MuiButton-contained.primary, .product-card .add-to-cart {
   background-color: var(--brand-cta) !important;
