@@ -186,22 +186,27 @@ header[role='banner'] .MuiButton-root {
 
 /* Make header toggle buttons and icons clearly visible */
 .header-flat-bg .view-toggle {
-  background: rgba(255,255,255,0.06) !important;
-  border: 1px solid rgba(255,255,255,0.12) !important;
+  /* make toggle readable: transparent background, clear white text */
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
   padding: 6px 10px !important;
   min-width: 72px !important;
   border-radius: 6px !important;
-  font-weight: 600 !important;
-  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  font-size: 0.92rem !important;
+  color: #ffffff !important;
 }
 .header-flat-bg .view-toggle.Mui-selected {
-  background: rgba(255,255,255,0.14) !important;
+  background: rgba(255,255,255,0.12) !important;
+  color: #083022 !important; /* selected shows dark text for contrast */
 }
 .header-flat-bg .cart-icon {
   margin-left: 6px;
 }
-.header-flat-bg .cart-icon .MuiSvgIcon-root {
+.header-flat-bg .cart-icon .MuiSvgIcon-root,
+.header-flat-bg .cart-icon svg {
   color: #ffffff !important;
+  fill: #ffffff !important;
 }
 .header-flat-bg .cart-icon .MuiBadge-badge {
   background-color: #ff6b6b !important; /* make badge visible */
@@ -210,6 +215,18 @@ header[role='banner'] .MuiButton-root {
 .header-flat-bg .add-pet-btn {
   margin-left: 6px;
   box-shadow: none !important;
+  /* make Add Pet clearly visible: use contrasting filled pill */
+  background-color: #ff8237 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+}
+
+/* Ensure ToggleButton label text specifically is visible */
+.header-flat-bg .view-toggle .MuiToggleButton-label {
+  color: #ffffff !important;
 }
 
 /* Primary CTA styling for Add to Cart, Add Pet, Check Out and hero title */
