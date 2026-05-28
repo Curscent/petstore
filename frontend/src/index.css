@@ -185,6 +185,29 @@ h1,h2,h3,h4,h5,h6,p,span,button,label,a {
   color: #ffffff !important;
   fill: #ffffff !important;
 }
+
+/* plain header buttons used to guarantee visibility */
+.header-btn, .plain-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  z-index: 10005;
+}
+.header-btn.active {
+  background: rgba(255,255,255,0.12);
+  color: #083022;
+}
+.plain-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.plain-btn .MuiSvgIcon-root { color: #ffffff !important; }
 /* restore Add Pet button's visual style inside the header (MUI Button with color=primary) */
 .site-header .MuiButton-root,
 header[role='banner'] .MuiButton-root {

@@ -152,6 +152,7 @@ export default function App() {
                 >
                   Find your perfect companion today
                 </Typography>
+                <Typography variant="h3" sx={{ color: 'secondary.main', fontWeight: 700 }} className="mt-3 text-lg sm:text-xl">Healthy, vetted pets and responsible care — all in one place.</Typography>
                 <Typography variant="body1" sx={{ color: 'secondary.main', opacity: 0.85 }} className="mt-4 text-stone-600 font-normal text-base sm:text-lg">
                   Adopt locally, shop ethically — discover pets and the care they need.
                 </Typography>
@@ -161,13 +162,24 @@ export default function App() {
                   <span className="px-3 py-1 rounded-full bg-white/70 text-stone-700">Care plans</span>
                   <span className="px-3 py-1 rounded-full bg-white/70 text-stone-700">New arrivals</span>
                 </div>
-                <div className="mt-6 max-w-2xl mx-auto lg:mx-0" />
+                <div className="mt-6 max-w-2xl mx-auto lg:mx-0">
+                  <div className="mt-6 grid grid-cols-2 gap-4">
+                    <div className="bg-white/70 p-4 rounded-lg shadow-sm">
+                      <h4 className="font-semibold">Why HappyPaws?</h4>
+                      <p className="text-sm text-stone-600 mt-2">We partner with local shelters and certified vets to ensure pets are healthy and ready for loving homes.</p>
+                    </div>
+                    <div className="bg-white/70 p-4 rounded-lg shadow-sm">
+                      <h4 className="font-semibold">Care Plans & Support</h4>
+                      <p className="text-sm text-stone-600 mt-2">Affordable starter kits, training guides, and 24/7 customer support to help your new pet settle in.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="relative flex flex-col gap-4 animate-[fadeUp_800ms_ease_forwards]">
                 <div className="group overflow-hidden rounded-3xl border border-white/60 bg-white/70 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=1200&q=80"
-                    alt="Happy dog sitting at home"
+                    src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=1200&q=80"
+                    alt="Curious cat peeking"
                     className="h-56 w-full object-cover sm:h-64 transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
@@ -179,16 +191,16 @@ export default function App() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="group overflow-hidden rounded-2xl border border-white/60 bg-white/70 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <img
-                      src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=600&q=80"
-                      alt="Pug sitting on a couch"
+                      src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=80"
+                      alt="Golden puppy looking up"
                       className="h-36 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
                   </div>
                   <div className="group overflow-hidden rounded-2xl border border-white/60 bg-white/70 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <img
-                      src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=600&q=80"
-                      alt="Colorful parrot perched on a branch"
+                      src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=600&q=80"
+                      alt="Rabbit sitting in grass"
                       className="h-36 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />

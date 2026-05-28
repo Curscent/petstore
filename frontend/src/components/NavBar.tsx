@@ -1,6 +1,6 @@
 import React from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
-import { IconButton, Badge, Button, Box, useTheme, ToggleButtonGroup, ToggleButton } from '@mui/material'
+import { Badge, Box, useTheme } from '@mui/material'
 import Logo from '../assets/petstore-logo.svg'
 
 type Props = {
@@ -27,28 +27,21 @@ export default function NavBar({ cartCount, onOpenAdd, onOpenCart, viewMode, onV
             </div>
           </div>
             <div className="flex items-center space-x-3">
-            <ToggleButtonGroup
-              color="primary"
-              size="small"
-              value={viewMode}
-              exclusive
-              onChange={(_, value) => value && onViewModeChange(value)}
-              aria-label="dashboard mode"
-            >
-              <ToggleButton value="customer" className="view-toggle">Customer</ToggleButton>
-              <ToggleButton value="admin" className="view-toggle">Admin</ToggleButton>
-            </ToggleButtonGroup>
-            {viewMode === 'admin' && (
-              <Button variant="contained" color="primary" size="small" onClick={onOpenAdd} className="add-pet-btn">Add Pet</Button>
-            )}
-            {viewMode === 'customer' && (
-              <IconButton aria-label="cart" color="primary" onClick={() => onOpenCart && onOpenCart()} className="cart-icon">
-                <Badge badgeContent={cartCount} color="error">
-                  <ShoppingCartIcon />
-                </Badge>
-              </IconButton>
-            )}
-          </div>
+              <div className="flex items-center gap-2">
+                <button className={`header-btn ${viewMode === 'customer' ? 'active' : ''}`} onClick={() => onViewModeChange('customer')}>Customer</button>
+                <button className={`header-btn ${viewMode === 'admin' ? 'active' : ''}`} onClick={() => onViewModeChange('admin')}>Admin</button>
+              </div>
+              {viewMode === 'admin' && (
+                <button className="add-pet-btn plain-btn" onClick={onOpenAdd}>Add Pet</button>
+              )}
+              {viewMode === 'customer' && (
+                <button className="cart-icon plain-btn" onClick={() => onOpenCart && onOpenCart()} aria-label="cart">
+                  <Badge badgeContent={cartCount} color="error">
+                    <ShoppingCartIcon />
+                  </Badge>
+                </button>
+              )}
+            </div>
         </div>
       </div>
     </Box>
