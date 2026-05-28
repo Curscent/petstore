@@ -20,6 +20,7 @@ export type Pet = {
 }
 
 export default function App() {
+  const API_BASE = (import.meta.env.VITE_API_BASE ?? '').replace(/\/$/, '')
   const [pets, setPets] = useState<Pet[]>([])
   const [loading, setLoading] = useState(false)
   type CartItem = { pet: Pet; quantity: number }
@@ -37,7 +38,7 @@ export default function App() {
   const load = async () => {
     setLoading(true)
     try {
-      const res = await axios.get('/api/pets')
+      const res = await axios.get(`${API_BASE}/api/pets`)
       setPets(res.data)
     } catch (e) { console.error(e) }
     setLoading(false)
@@ -50,7 +51,7 @@ export default function App() {
       const updated: Pet = e.detail
       if (!updated?.id) return
       try {
-        const res = await axios.put(`/api/pets/${updated.id}`, updated)
+  const res = await axios.put(`${API_BASE}/api/pets/${updated.id}`, updated)
         setPets((prev) => prev.map((p) => p.id === res.data.id ? res.data : p))
         setUpdateSnack('Pet updated')
         setTimeout(() => setUpdateSnack(null), 2500)
@@ -66,7 +67,7 @@ export default function App() {
 
   const handleCreate = async (pet: Pet) => {
     try {
-      const res = await axios.post('/api/pets', pet)
+  const res = await axios.post(`${API_BASE}/api/pets`, pet)
       setPets((p) => [...p, res.data])
       return
     } catch (err: any) {
@@ -95,7 +96,7 @@ export default function App() {
     setPets((p) => p.filter((x) => x.id !== id))
     console.log('Attempting to delete pet', id)
     try {
-      await axios.delete(`/api/pets/${id}`)
+  await axios.delete(`${API_BASE}/api/pets/${id}`)
     } catch (error: any) {
       console.error('Full error details:', error)
       const errorMessage = error?.response?.data?.message || error?.response?.data || error?.message || 'Unknown server error'
