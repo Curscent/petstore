@@ -163,7 +163,27 @@ h1,h2,h3,h4,h5,h6,p,span,button,label,a {
 .site-header *, header[role='banner'],
 .site-footer *, footer * {
   color: #ffffff !important;
-  background-color: var(--brand-green) !important; /* keep green background */
+}
+
+/* ensure header sits above page content and controls are on top */
+.site-header, header[role='banner'], .header-flat-bg {
+  position: relative;
+  z-index: 9999;
+}
+.site-header .max-w-7xl, .site-header .flex {
+  position: relative;
+  z-index: 10000;
+}
+.site-header .MuiToggleButton-root,
+.site-header .MuiButton-root,
+.site-header .MuiIconButton-root {
+  position: relative;
+  z-index: 10001 !important;
+}
+.site-header .MuiSvgIcon-root, .site-header svg {
+  z-index: 10002 !important;
+  color: #ffffff !important;
+  fill: #ffffff !important;
 }
 /* restore Add Pet button's visual style inside the header (MUI Button with color=primary) */
 .site-header .MuiButton-root,
